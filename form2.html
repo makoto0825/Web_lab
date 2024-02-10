@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form2</title>
+    <style>
+      body {
+        width: 600px;
+        margin: 20px auto;
+        padding: 10px 30px;
+      }
+      label {
+        width: 30%;
+        text-align: right; /* Add this line */
+        margin-right: 10px;
+      }
+      input {
+        width: 50%;
+      }
+      div {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="border-bottom: solid gainsboro">Payment</h1>
+    <form action="">
+      <div>
+        <label for="">Card Holder's Name</label>
+        <input type="text" name="cardHolderName" id="cardHolderName" />
+      </div>
+      <div>
+        <label for="">Card Number</label>
+        <input type="text" name="Card Number" id="Card Number" />
+      </div>
+      <div>
+        <label for=""> Card Expiry Date</label>
+        <select name="month" style="width: 40%">
+          <option value="" selected hidden></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <select name="year" style="width: 20%; margin-left: 10px">
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+        </select>
+      </div>
+      <div>
+        <label for="">Card CVV</label>
+        <input type="text" name="CVV" id="CVV" style="width: 30%" />
+      </div>
+      <div style="display: block">
+        <input
+          type="checkbox"
+          name="saveCardDetails"
+          id="saveCardDetails"
+          style="width: 5%; margin-left: 180px"
+        />
+        <span>Save card on file?</span>
+      </div>
+      <div
+        style="
+          background: rgb(25, 207, 25);
+          color: white;
+          width: 14%;
+          text-align: center;
+          display: block;
+          margin: 0 187px;
+          border-radius: 5px;
+        "
+      >
+        Pay Now
+      </div>
+    </form>
+  </body>
+</html>
