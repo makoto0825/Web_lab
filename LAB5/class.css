@@ -1,0 +1,16 @@
+body{
+    background-image: red;
+    font-size: 20px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+header{
+    padding-bottom: 7.5rem;
+    border-bottom: 3px solid #000;
+    margin-bottom: 0;
+}
+h1{
+    font-size: 200;
+    margin-bottom: 0;
+}
