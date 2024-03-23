@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    inventory = {}; //create an empty object
+
+    //addProduct function adds a product to the inventory object
+    function addProduct(id, name, quantity) {
+      inventory[id] = { name: name, quantity: quantity };
+    }
+    //displayInventory function displays the inventory object
+    function displayInventory() {
+      console.log(inventory);
+    }
+    //findProduct function finds a product in the inventory object
+    function findProduct(id) {
+      if (inventory[id] == undefined) {
+        console.log("Product not found");
+      } else {
+        console.log("Product exists");
+        console.log(inventory[id]);
+      }
+    }
+
+    addProduct(1, "Apple", 10);
+    addProduct(2, "Banana", 4);
+    addProduct(3, "Orange", 6);
+    displayInventory();
+    findProduct(2);
+    findProduct(4);
+  </script>
+  <body></body>
+</html>
