@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    //inventory object
+    inventory = {
+      1: { name: "Apple", price: 3.2, quantity: 10 },
+      2: { name: "Banana", price: 1, quantity: 4 },
+      3: { name: "Orange", price: 2, quantity: 6 },
+    };
+
+    //addProduct function adds a product to the inventory object
+    function addProduct(id, name, price, quantity) {
+      inventory[id] = { name: name, price: price, quantity: quantity };
+    }
+    //deleteProduct function
+    function deleteProduct() {
+      let id = prompt("Enter the product id to delete:");
+      if (inventory[id] == undefined) {
+        console.log("Product not found");
+      } else {
+        delete inventory[id];
+        console.log("Product deleted: key" + id);
+      }
+    }
+    //showInventory function displays the inventory object
+    function showInventory() {
+      for (let key in inventory) {
+        console.log("=====================================");
+        console.log("Product id:", key);
+        console.log("name:", inventory[key].name);
+        console.log("price:", inventory[key].price);
+        console.log("quantity:", inventory[key].quantity);
+      }
+    }
+    //totalValue function calculates the total value of the inventory
+    function totalValue() {
+      let total = 0;
+      for (let key in inventory) {
+        total += inventory[key].price * inventory[key].quantity;
+      }
+      console.log("Total value of the inventory:", total);
+    }
+
+    addProduct(4, "Grapes", 5, 8);
+    addProduct(5, "Pineapple", 4, 3);
+    addProduct(6, "Mango", 2, 5);
+    deleteProduct();
+    showInventory();
+    totalValue();
+  </script>
+  <body></body>
+</html>
